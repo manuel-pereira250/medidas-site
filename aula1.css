@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*Garante que o preenchimento/padding seja incluído no calculo da largura, evitando que o conteúdo ultrapasse a tela*/
+}
+
+/*html e tudo que esta no meu site ele manda na pagina enteira*/
+html{
+    width: 100%;
+    height: 100vh;
+    /*largura e altura total*/
+}
+
+header{
+    padding: min(5vh, 4rem);/*Ajustando o padding: para ser mais flexível*/
+    background-color: #010937;
+    width: 100%;/*Colocamos a largura para 100vw para 100%*/
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    /*Aqui começamos o posicionamento do header*/
+    position: sticky;
+    /*Posicionamento do header usando o stick, sendo um posicionamento fixo, porém distinto do fixed*/
+
+    top: 0;
+    /*Rspaçamento superior zerado, fazendo com que o header fique grudado ao top*/
+
+    left: 0;
+    /*Espaçamento a esquerda zerado, fazendo com que o header fique grudado à esquerda*/
+
+    z-index: 999;
+    /*eixo de profundidade (Eixo Cartesiano)*/
+
+    /*Borda interior*/
+    box-shadow: 0 0.21rem 0.5rem white;
+    /*Primeiro valor sombra na Direita (0) segundo valor sombra bottom na vertical (0.21rem) terceiro valor gradiant da sombra (0.5rem)*/
+
+}
+header i{
+    color: white;
+    font-size: 4em;/*tamanho do icone (icone trabalha como se fosse texto)*/
+}
+
+header button{
+    width: 13rem;
+    height: 1.5rem;
+    background-color: #101f78;
+    border-radius: 1rem;
+    padding: 1.3rem;/*espaçamento do item*/
+    color: white;
+
+    /*parte do button do texto*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-01{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #000524;
+    width: 100%;
+    padding: min(20vh, 6rem);
+}
+.div-1 p{
+    color: white;
+    font-size: 2em;
+    margin: 1.2em;
+}
+.div-2 img{
+    width: 30rem;
+    margin: 5rem auto;
+    display: block; /*Garantindo que a imagem se comporte como um bloco*/
+}
+.section-02{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #000524;
+    width: 100%;
+    padding: 20vh, 6rem;
+}
+footer{
+    background-color: #010937;
+    width: 100%;
+    padding: min(10vh, 4rem);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 0.5em;
+}
+.div-logo i{
+    font-size: 3em;
+}
+.div-list ul{
+    display: flex;
+    justify-content: end;
+   
+}
+.div-list li{
+margin-left: 5rem;
+text-decoration: none;
+}
+
+@media (max-width:830px){
+    header i {
+        font-size: 5.5em;
+        z-index: 999;
+    }
+    header button{
+        width: 10rem;
+        height: 0.8rem;
+    }
+    .section-01{
+        padding: 9rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    .div-1 p{
+        font-size: 1.1rem;
+        line-height: 1.5;
+        text-align: left;
+        padding: 2.3rem;
+        width: 100%;
+        margin: 1em;
+    }
+    .div-2 img{
+        width: 20rem;
+        margin: 0 2rem;
+    }
+    .section-02{
+        padding: 9rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+}
+/*
+paleta de cores
+https://paletadecores.com/paleta/1c31a5/101f78/020f59/010937/000524/*/
