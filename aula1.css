@@ -85,6 +85,72 @@ header button{
     width: 100%;
     padding: 20vh, 6rem;
 }
+.section-03{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000524;
+    width: 100%;
+    padding: min(20vh, 6rem);
+}
+.div-pai{/*chamando a div pai de 3 caixas dentro*/
+    display: flex;/*Tornando ele flexivel*/
+    justify-content: center;/*Justificando os itens na horizontal*/
+    align-items: center;/*Justificando os itens na horizontal*/
+    margin-bottom: 10rem;/*Espaçamento inferior em relação a sessão*/
+    z-index: 1;/*Prioridade do eixo Z (eixo cartesiano)*/
+
+    flex-wrap: wrap;/*Habilitando a quebra de linha das caixas caso necessário*/
+    position: relative;/*Posicionamento relativo*/
+}
+.card{/*Aqui estamos estilizando nossa caixa onde dentro estão os conteúdos*/
+    width: 200px;/*largura da caixa*/
+    height: 400px;/*Altura da caixa*/
+    margin: 30px;/*Espaçamento da caixa*/
+    box-shadow: 20px 20px 50px purple;/*Sombra da caixa e cor*/
+    border-radius: 15px;/*Arredondamento da borda*/
+    background-color: rgba(233, 167, 223, 0.288);/*Cor de fundo do elemento*/
+}
+.content{/*Caixa de conteúdo*/
+    padding: 20px;/*Preenchimento interno do conteúdo*/
+    text-align: center;/*alinhamdo o conteudo ao centro*/
+    transform: translatey(50px);/*Estabelecendo um raio de 50px de espaço no eixo y*/
+    opacity: 0.2; /*20% de opacidade*/
+    transition: 0.5s;/*Aplicando uma transição no evento*/
+}
+.content:hover{
+    opacity: 1;/*100% de visibilidade*/
+    transform: translateY(0px);/*Aplicando o retorno do conteudo ao eixoY em 0*/
+}
+.content h2{/*Subtitulo da caixa*/
+    position: absolute;/*Posicionamento absoluto em relação ao PAI*/
+    right: 30px;/*jogando ele 30px a direita*/
+    font-size: 5rem;/*tamanho da letra*/
+    color: rgba(128, 128, 128, 0.557);/*cor da letra - deixar no transparente*/
+}
+.content h3{/*segundo Subtitulo da caixa*/
+    font-size: 1.8em;/*tamanho da letra*/
+    color: white;/*cor da letra*/
+    z-index: 1;/*prioridade da letra eixo Z*/
+}
+.content p{/*Paragrafo da caixa*/
+    font-size: 0.8em;/*tamanho da letra*/
+    color: white;/*cor da letra*/
+    font-weight: 300;/*peso da letra*/
+    margin-top: 4rem;/*espaçamento superior*/
+}
+.content a{/*botão âncora da caixa*/
+    padding: 8px 20px;/*preenchimento eixo X e Y*/
+    background: white;/*cor de fundo*/
+    color: black;/*cor da letra*/
+    text-decoration: none;/*removendo o sublinhado*/
+    border-radius: 15px;/*arrendondamento da borda*/
+    font-weight: 500;/*peso da fonte*/
+    margin-top: 2.7rem;/*espaçamento superior*/
+    box-shadow: 0 5px 15px black;/*sombra da caixa*/
+    display: inline-block;/*comportamento do butão em linha e sempre em bloco*/
+    position: relative;/*posicionamento relativo*/
+}
 footer{
     background-color: #010937;
     width: 100%;
@@ -143,6 +209,19 @@ text-decoration: none;
         justify-content: center;
         align-items: center;
         gap: 15px;
+    }
+    .section-03{
+        padding: 9rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    .div-pai div{
+        display: block;
+        align-items: center;
+        justify-content: center;
     }
 }
 /*
