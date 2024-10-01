@@ -114,13 +114,13 @@ header button{
 .content{/*Caixa de conteúdo*/
     padding: 20px;/*Preenchimento interno do conteúdo*/
     text-align: center;/*alinhamdo o conteudo ao centro*/
-    transform: translatey(50px);/*Estabelecendo um raio de 50px de espaço no eixo y*/
+    transform: translatey(50px);/*Move o conteúdo 50px para baixo inicialmente*/
     opacity: 0.2; /*20% de opacidade*/
-    transition: 0.5s;/*Aplicando uma transição no evento*/
 }
 .content:hover{
     opacity: 1;/*100% de visibilidade*/
     transform: translateY(0px);/*Aplicando o retorno do conteudo ao eixoY em 0*/
+    transition: 0.5s;/*Aplicando uma transição no evento*/
 }
 .content h2{/*Subtitulo da caixa*/
     position: absolute;/*Posicionamento absoluto em relação ao PAI*/
